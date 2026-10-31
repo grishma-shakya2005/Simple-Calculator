@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="calculator">
+      <header class="calculator-header">
+        <h1>Calculator</h1>
+        <div class="header-actions">
+          <button class="header-button" id="theme-toggle" type="button">Light</button>
+          <button class="header-button" id="history-toggle" type="button"
+            aria-expanded="false" aria-controls="history-panel">History</button>
+        </div>
+      </header>
+      <div class="display" aria-label="Calculator display">
+        <div id="expression" class="expression" aria-live="polite"></div>
+        <output id="display">0</output>
+      </div>
+
+      <div class="buttons">
+        <button class="control" data-action="clear">C</button>
+        <button class="control" data-action="delete" aria-label="Delete">⌫</button>
+        <button class="operator" data-operator="÷">÷</button>
+        <button class="operator" data-operator="×">×</button>
+
+        <button class="number" data-number="7">7</button>
+        <button class="number" data-number="8">8</button>
+        <button class="number" data-number="9">9</button>
+        <button class="operator" data-operator="-">−</button>
+
+        <button class="number" data-number="4">4</button>
+        <button class="number" data-number="5">5</button>
+        <button class="number" data-number="6">6</button>
+        <button class="operator" data-operator="+">+</button>
+
+        <button class="number" data-number="1">1</button>
+        <button class="number" data-number="2">2</button>
+        <button class="number" data-number="3">3</button>
+        <button class="equals" data-action="equals">=</button>
+
+        <button class="number zero" data-number="0">0</button>
+        <button class="number" data-number=".">.</button>
+      </div>
+    </main>
+
+    <aside id="history-panel" class="history-panel" aria-label="Calculation history">
+      <div class="history-header">
+        <h2>History</h2>
+        <button id="clear-history" class="clear-history" type="button">Clear History</button>
+      </div>
+      <div id="history-list" class="history-list">
+        <p class="empty-history">No calculations yet.</p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
